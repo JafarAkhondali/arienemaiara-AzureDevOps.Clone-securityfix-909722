@@ -12,6 +12,10 @@ a:focus {
 	transition: all 0.3s;
 }
 
+p {
+    font-size: 14px;
+}
+
 input[type="text"] {
     font-size: 14px;
 }
@@ -157,7 +161,9 @@ a [aria-expanded="true"] {
     min-width: 36px;
 }
 
-
+.board-titles p {
+    padding: 8px 12px;
+}
 
 
 
