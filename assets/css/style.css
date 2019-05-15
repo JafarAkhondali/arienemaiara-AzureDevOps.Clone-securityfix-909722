@@ -240,6 +240,29 @@ a [aria-expanded="true"] {
 }
 
 /* new task */
+.modal-lg {
+    max-width: 900px;
+}
+
+.modal-content {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.modal-task .modal-header {
+    border-left: 5px solid #0078d4; 
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.new-task-actions {
+    display: inline-flex;
+}
+
+.new-task-actions .float-right {
+    right: 0;
+    position: absolute;
+}
 
 
 

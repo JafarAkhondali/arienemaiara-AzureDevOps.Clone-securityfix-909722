@@ -202,30 +202,79 @@
 
     <!-- new task modal  -->
     <div class="modal fade" id="new-task-modal" tabindex="-1" role="dialog" aria-labelledby="new-task-modal" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-lg modal-task" role="document">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                <div class="modal-header">
+                    <div class="col-12">
+                        <div class="row">
+                            <p class="small-title">User story 1136*</p>
+                        </div>
+                        <div class="row">
+                            <div class="input-title">
+                                <span>1136</span>
+                                <input type="text" class="new-task-input" id="input-title">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="new-task-actions">
+                                <p class="header-option text-muted"><i class="fas fa-user-circle"></i>Ariene Maiara Ribeiro</p>
+                                <div class="float-right">
+                                    <button id="save-task" class="btn btn-primary btn-sm"><i class="fas fa-save"></i>Save & Close</button>
+                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="far fa-eye"></i>Follow</a>
+                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-redo"></i></a>
+                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-undo"></i></a>
+                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="modal-body p-0">
+                    <div class="col-12">
+                        <div class="row task-info bg-light pt-2">
+                            <div class="col-12 col-md-3">
+                                <p><label class="text-muted">Stage</label> <span class="task-status">new</span></p>
+                                <p><label class="text-muted">Reason</label> <span>new</span></p>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <p><label class="text-muted">Area</label> <span>SIDEC</span></p>
+                                <p><label class="text-muted">Iteration</label> <span>SIDEC\Sprint 1</span></p>
+                            </div>
+                            <div class="col">
+                                <p class="text-muted">Updated by Ariene Maiara 4 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="row task-form bg-white pt-2">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="form-control" placeholder="Click to add Description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Acceptance Criteria</label>
+                                    <textarea class="form-control"  placeholder="Click to add Acceptence Criteria"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+
+                            </div>
+                            <div class="col-12 col-md-3">
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
-            </div>
+
+                    <!-- <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form> -->
+                </div>
             </div>
         </div>
     </div>
@@ -235,23 +284,23 @@
     <script src="src/tasks.js"></script>
 
     <script>
-            function allowDrop(ev) {
-                ev.preventDefault();
-            }
-            
-            function drag(ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
-            
-            function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                var idOrigem = data.split("-")[2]
-                var idDestino = ev.target.id
-                idDestino = idDestino.split("-")[2]
-                if (idOrigem == idDestino)
-                    ev.target.appendChild(document.getElementById(data));
-            }
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var idOrigem = data.split("-")[2]
+            var idDestino = ev.target.id
+            idDestino = idDestino.split("-")[2]
+            if (idOrigem == idDestino)
+                ev.target.appendChild(document.getElementById(data));
+        }
     </script>
 </body>
 </html>
