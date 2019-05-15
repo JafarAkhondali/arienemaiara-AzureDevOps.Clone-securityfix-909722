@@ -53,10 +53,6 @@ a.header-option:hover {
     height: 100%;
 }
 
-/* .sidebar.active{
-	margin-left: -250px;
-} */
-
 .sidebar .img-menu {
     height: 24px;
     width: 24px;
@@ -125,14 +121,14 @@ a [aria-expanded="true"] {
     font-size: 13px;
 }
 
-.nav-tabs .nav-item.show .nav-link, 
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link:hover, 
-.nav-tabs .nav-link.active:hover {
+.team-sprint-board .nav-tabs .nav-item.show .nav-link, 
+.team-sprint-board .nav-tabs .nav-link.active,
+.team-sprint-board .nav-tabs .nav-item.show .nav-link:hover, 
+.team-sprint-board .nav-tabs .nav-link.active:hover {
     border: none;
 }
 
-.nav-tabs .nav-link {
+.team-sprint-board .nav-tabs .nav-link {
     border: none;
     border-radius: 0;
     margin: 5px 10px;
@@ -144,9 +140,9 @@ a [aria-expanded="true"] {
     font-weight: 400;
 }
 
-.nav-tabs .nav-item.show .nav-link, 
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link.active:hover {
+.team-sprint-board .nav-tabs .nav-item.show .nav-link, 
+.team-sprint-board .nav-tabs .nav-link.active,
+.team-sprint-board .nav-tabs .nav-link.active:hover {
     font-weight: bold;
     border-bottom: 2px solid #007bff;
 }
@@ -163,7 +159,23 @@ a [aria-expanded="true"] {
 
 .board-titles p {
     padding: 8px 12px;
+    margin: 0;
 }
+
+.board-cols > div {
+    padding: 3px;
+}
+
+.board-cols div div {
+    min-height: 150px;
+}
+
+.board-col-item {
+    background-color: #f1f1f1;
+}
+
+/* new task */
+
 
 
 
