@@ -166,7 +166,7 @@ a [aria-expanded="true"] {
     padding: 3px;
 }
 
-.board-cols div div {
+.board-cols > div > div {
     min-height: 150px;
 }
 
@@ -174,6 +174,42 @@ a [aria-expanded="true"] {
     background-color: #f1f1f1;
 }
 
+.task-card {
+    background-color: #fff;
+    border-left: 4px solid #ccc;
+    border: 1px solid #ccc;
+    margin: 5px 15px 0;
+    min-height: 80px!important;
+}
+
+.task-card-inner {
+    padding: 10px;
+    border-left: 3px solid #ccc;
+}
+
+.task-card.new .task-card-inner {
+    border-left-color: #0078d4;
+}
+
+.task-card-inner p {
+    margin-bottom: 8px;
+}
+
+.task-status {
+    margin-left: 10px;
+}
+
+.task-status::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #ccc;
+    margin-right: 5px;
+ }
 /* new task */
 
 
