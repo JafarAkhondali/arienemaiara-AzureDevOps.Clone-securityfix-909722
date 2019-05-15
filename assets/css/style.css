@@ -29,7 +29,7 @@ header > .navbar {
 
 header .logo {
     color: #0078d4;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 a.header-option {
@@ -51,6 +51,28 @@ a.header-option:hover {
     border-right: 1px solid rgba(0,0,0,0.1);
     /* transition: all 0.4s; */
     height: 100%;
+    margin-left: -15px;
+}
+
+.sidebar-header {
+    line-height: 28px;
+    border-bottom: 1px solid #ccc;
+    padding: 12px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.sidebar-header .icon-persona {
+    background: rgb(0, 171, 169) none repeat scroll 0% 0%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    float: left;
+    margin-right: 10px;
 }
 
 .sidebar .img-menu {
@@ -172,24 +194,26 @@ a [aria-expanded="true"] {
 
 .board-col-item {
     background-color: #f1f1f1;
+    padding: 10px;
 }
 
 .task-card {
     background-color: #fff;
     border-left: 4px solid #ccc;
     border: 1px solid #ccc;
-    margin: 5px 15px 0;
+    /* margin: 0 15px 5px; */
     min-height: 80px!important;
+    max-width: 230px;
 }
 
 .task-card-inner {
     padding: 10px;
-    border-left: 3px solid #ccc;
+    border-left: 3px solid #0078d4;;
 }
 
-.task-card.new .task-card-inner {
+/* .task-card.new .task-card-inner {
     border-left-color: #0078d4;
-}
+} */
 
 .task-card-inner p {
     margin-bottom: 8px;
@@ -209,7 +233,12 @@ a [aria-expanded="true"] {
     border-radius: 7.5px;
     background-color: #ccc;
     margin-right: 5px;
- }
+}
+
+.board-col-item .task-card .task-card-inner {
+    border-left-color: #ffc600;
+}
+
 /* new task */
 
 

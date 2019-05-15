@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light fixed-top mb-0 p-1">
-            <a class="col-sm-3 col-md-2 mr-0 text-muted" href="#">Azure <span class="logo">DevOps</span></a>
+        <nav class="navbar navbar-light fixed-top bg-white mb-0 p-1">
+            <a class="col-sm-3 col-md-2 mr-0 text-muted" href="#"><b>Azure <span class="logo">DevOps</span></b></a>
             <div class="col">
                 <ol class="breadcrumb bg-transparent mb-0 p-0 pr-3">
                     <li class="breadcrumb-item text-muted"><a href="#">imagem-solucoes</a></li>
@@ -37,9 +37,13 @@
     </header>
     
     <div class="container-fluid">
-        <div class="row">
+        <div class="">
             <nav class="sidebar col-sm-3 col-md-2 mr-0 p-0">
-                <ul class="list-unstyled pt-3">
+                <div class="sidebar-header">
+                    <div class="icon-persona">S</div>
+                    SIDEC     
+                </div>
+                <ul class="list-unstyled pt-2">            
                     <li>
                         <a href="#">
                             <img src="assets/img/menu/overview.png" class="img-menu" alt="">
@@ -161,9 +165,9 @@
                                         <p>Closed</p>
                                     </div>
                                 </div>
-                                <div class="row board-cols">
-                                    <div class="col-12 col-md-2">
-                                        <div class="task-card new">
+                                <!-- <div class="row board-cols">
+                                    <div class="col-12 col-md-2 px-3 py-2" id="default-col" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <div class="task-card new" id="task-card" draggable="true" ondragstart="drag(event)">
                                             <div class="task-card-inner">
                                                 <p><b class="pr-2">1001</b>Nova Atividade</p>
                                                 <p class="text-muted"><i class="fas fa-user-circle"></i> Unassigned</p>
@@ -172,20 +176,20 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-md">
-                                        <div class="board-col-item col-new">
+                                        <div class="board-col-item col-new" id="col-new" ondrop="drop(event)" ondragover="allowDrop(event)">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md">
-                                        <div class="board-col-item col-active">
+                                        <div class="board-col-item col-active" id="col-active" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                                         </div>
                                     </div>
                                     <div class="col-12 col-md">
-                                        <div class="board-col-item col-closed">
+                                        <div class="board-col-item col-closed" id="col-closed" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div><!-- /tab-content -->  
                     </div><!-- /sprint-tabs -->  
@@ -229,5 +233,21 @@
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="src/js/bootstrap.min.js"></script>
     <script src="src/tasks.js"></script>
+
+    <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+    </script>
 </body>
 </html>
