@@ -116,8 +116,46 @@ a [aria-expanded="true"] {
     color: #a2a2a2;
 }
 
+/* taskboard */
+.nav-item {
+    font-size: 13px;
+}
 
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link:hover, 
+.nav-tabs .nav-link.active:hover {
+    border: none;
+}
 
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    margin: 5px 10px;
+    display: inline-block;
+    padding: 8px 0;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    font-weight: 400;
+}
+
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active:hover {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-options {
+    right: 0;
+    position: absolute;
+}
+
+.tab-options > a {
+    margin: 0!important;
+    min-width: 36px;
+}
 
 
 
