@@ -1,0 +1,137 @@
+/* common */
+body {
+    background-color: #fff;
+    color: #181818;
+}
+
+a,
+a:hover,
+a:focus {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+input[type="text"] {
+    font-size: 14px;
+}
+
+/* header */
+header > .navbar {
+    height: 48px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+header .logo {
+    color: #0078d4;
+    font-weight: 600;
+}
+
+a.header-option {
+    display: block;
+    height: 100%;
+    line-height: 36px;
+    padding-left: 10px;
+}
+
+a.header-option:hover {
+    background-color: #f1f1f1;
+}
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    margin-top: 48px;
+    background: #eaeaea;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    /* transition: all 0.4s; */
+    height: 100%;
+}
+
+/* .sidebar.active{
+	margin-left: -250px;
+} */
+
+.sidebar .img-menu {
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-right: 8px;
+}
+
+.sidebar ul li a {
+	padding: 13px;
+    font-size: 14px;
+	display: block;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a:hover,
+.sidebar .collapse li a:hover {
+    background: #d3d3d3;
+}
+
+.sidebar ul li.active > a,
+a [aria-expanded="true"] {
+    background: #d3d3d3;
+}
+
+.sidebar .collapse a {
+    padding-left: 20px;
+    background: #dedede;
+}
+
+.sidebar .collapse a i {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+/* @media(maz-width: 768px){
+	#sidebar{margin-left: -250px;}
+	#sidebar.active{
+		margin-left: 0px;
+	}
+	#sidebarCollapse span{
+		display: none;
+	}
+} */
+
+/* main */
+[role="main"] {
+    padding-top: 48px;
+}
+
+.gray-hover:hover {
+    background-color: #f1f1f1;
+}
+
+.team-name span {
+    font-size: 18px;
+}
+
+.sprint-date .date-info {
+    line-height: 14px;
+    font-weight: 100;
+    color: #a2a2a2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

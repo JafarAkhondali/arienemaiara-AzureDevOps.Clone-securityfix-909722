@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DevOps - Task Management</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light fixed-top mb-0 p-1">
+            <a class="col-sm-3 col-md-2 mr-0 text-muted" href="#">Azure <span class="logo">DevOps</span></a>
+            <div class="col">
+                <ol class="breadcrumb bg-transparent mb-0 p-0 pr-3">
+                    <li class="breadcrumb-item text-muted"><a href="#">imagem-solucoes</a></li>
+                    <li class="breadcrumb-item text-muted"><a href="#">SIDEC</a></li>
+                    <li class="breadcrumb-item text-muted">Sprints</li>
+                </ol>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col input-group pr-2">
+                        <input type="text" class="form-control border-right-0 rounded-0" placeholder="Search" aria-label="Search" aria-describedby="search-icon">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent border-left-0 rounded-0" id="search-icon"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-1 p-0"><a href="#" class="header-option text-muted"><i class="fas fa-tasks"></i></a></div>
+                    <div class="col-1 p-0"><a href="#" class="header-option text-muted"><i class="fas fa-shopping-bag"></i></a></div>
+                    <div class="col-1 p-0"><a href="#" class="header-option text-muted"><i class="fas fa-user-circle"></i></a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="sidebar col-sm-3 col-md-2 mr-0 p-0">
+                <ul class="list-unstyled pt-3">
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/menu/overview.png" class="img-menu" alt="">
+                            Overview
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#boards-submenu" data-toggle="collapse" aria-expanded="false" class="">
+                            <img src="assets/img/menu/boards.png" class="img-menu" alt="">
+                            Boards
+                        </a>
+                        <ul class="collapse list-unstyled" id="boards-submenu">
+                            <li>
+                                <a href="#"><i class="far fa-clipboard"></i>Work Items</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-buromobelexperte"></i>Boards</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-align-right"></i>Backlogs</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-redo"></i>Sprints</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-filter"></i>Queries</a>
+                            </li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/menu/repos.png" class="img-menu" alt="">
+                            Repos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/menu/pipelines.png" class="img-menu" alt="">
+                            Pipelines
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/menu/test_plans.png" class="img-menu" alt="">
+                            Test Plans
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/menu/artifacts.png" class="img-menu" alt="">
+                            Artifacts
+                        </a>
+                    </li>
+                </ul>
+            </nav><!-- /sidebar -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                
+                <div class="row team-info py-3">
+                    <div class="col team-name">
+                        <a href="#" class="float-left gray-hover px-2 py-1">
+                            <i class="fas fa-redo float-left pt-1 pr-3"></i>
+                            <span>SIDEC Team</span>
+                            <i class="fas fa-chevron-down text-muted"></i>
+                        </a>
+                        <div class="options float-left py-1">
+                            <a href="#" class="px-2"><i class="far fa-star text-warning"></i></a>
+                            <a href="#"><i class="fas fa-user-friends"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 sprint-date">
+                        <p class="date-info p-0 m-0">January 25 - February 1</p>
+                        <small class="text-muted">1 work day remaining</small>
+                    </div>
+                </div><!-- /team-info -->
+                <div class="row team-sprint-board">
+
+                </div><!-- /team-sprint-board -->    
+                
+            </main>
+        </div>
+        
+    </div>
+   
+    <script src="src/js/jquery-3.4.1.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
+</body>
+</html>
