@@ -212,7 +212,7 @@
                         <div class="row">
                             <div class="input-title">
                                 <span>1136</span>
-                                <input type="text" class="new-task-input" id="input-title">
+                                <input type="text" class="new-task-input form-control" id="input-title">
                             </div>
                         </div>
                         <div class="row">
@@ -248,18 +248,42 @@
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea class="form-control" placeholder="Click to add Description"></textarea>
+                                    <textarea class="form-control no-border" placeholder="Click to add Description"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Acceptance Criteria</label>
-                                    <textarea class="form-control"  placeholder="Click to add Acceptence Criteria"></textarea>
+                                    <textarea class="form-control no-border"  placeholder="Click to add Acceptence Criteria"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Discussion</label>
+                                    <textarea class="form-control"  placeholder="Add a Comment"></textarea>
                                 </div>
                             </div>
                             <div class="col-12 col-md-3">
-
+                                <div class="form-group">
+                                    <label>Planning</label>
+                                    <input type="text" class="form-control no-border" id="effort" placeholder="Effort">
+                                    <input type="text" class="form-control no-border" id="remaining-work" placeholder="Remaining Work">
+                                    <input type="text" class="form-control no-border" id="done-hour" placeholder="Done Hour">
+                                    <input type="text" class="form-control no-border" id="priority" placeholder="Priority">
+                                    <input type="text" class="form-control no-border" id="risk" placeholder="Risk">
+                                </div>
+                                <div class="form-group">
+                                    <label>Classification</label>
+                                    <input type="text" class="form-control no-border" id="value-area" placeholder="Value Area">
+                                </div>
                             </div>
                             <div class="col-12 col-md-3">
-
+                                <div class="form-group">
+                                    <label>Development</label>
+                                    <a href="#"><i class="fas fa-plus text-success pr-2"></i>Add a link</a>
+                                    <p>Development hasn't started on this item</p>
+                                    <a href="#">Create new branch</a>
+                                </div>
+                                <div class="form-group">
+                                    <label>Realated Work</label>
+                                    <a href="#"><i class="fas fa-plus text-success pr-2"></i>Add a link</a>
+                                </div>
                             </div>
                         </div>
                     </div>
