@@ -300,7 +300,8 @@ a [aria-expanded="true"] {
     color: #AAA;
 }
 
-.modal-task .form-inline {
+.modal-task .form-inline,
+.modal-task .form-inline .form-group {
     width: 100%;
 }
 
@@ -324,6 +325,18 @@ a [aria-expanded="true"] {
     position: absolute;
 }
 
+.task-info {
+	border-bottom: 1px solid #ccc;
+}
+
+.task-info label {
+    min-width: 80px;
+}
+
+.modal-task .task-status {
+    margin-left: 0;
+}
+
 button#save-task {
     height: 30px;
     margin-top: -2px;
@@ -341,6 +354,9 @@ button#save-task {
     margin-bottom: 0;
 }
 
+.task-form a {
+    font-size: 14px;
+}
 
 
 
