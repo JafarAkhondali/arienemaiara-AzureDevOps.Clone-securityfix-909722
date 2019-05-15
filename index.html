@@ -118,7 +118,7 @@
                         <small class="text-muted">1 work day remaining</small>
                     </div>
                 </div><!-- /team-info -->
-                <div class="row team-sprint-board">
+                <div class="row team-sprint-board pb-3">
                     <div class="sprint-tabs col p-0">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
@@ -246,7 +246,11 @@
             function drop(ev) {
                 ev.preventDefault();
                 var data = ev.dataTransfer.getData("text");
-                ev.target.appendChild(document.getElementById(data));
+                var idOrigem = data.split("-")[2]
+                var idDestino = ev.target.id
+                idDestino = idDestino.split("-")[2]
+                if (idOrigem == idDestino)
+                    ev.target.appendChild(document.getElementById(data));
             }
     </script>
 </body>

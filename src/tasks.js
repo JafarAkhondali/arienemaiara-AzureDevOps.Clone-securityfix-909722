@@ -24,21 +24,21 @@ function criarLinhaTask(task) {
     var htmlCard = criarCardTask(task)
 
     var linhaTask = `<div class="row board-cols">
-                        <div class="col-12 col-md-2 px-3 py-2" id="default-col${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="col-12 col-md-2 px-3 py-2" id="default-col-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
                             ${task.status === "new" ? htmlCard : ''}
                         </div>
                         <div class="col-12 col-md">
-                            <div class="board-col-item col-new" id="col-new${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div class="board-col-item col-new" id="col-new-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
                                 ${task.status === "started" ? htmlCard : ''}
                             </div>
                         </div>
                         <div class="col-12 col-md">
-                            <div class="board-col-item col-active" id="col-active${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div class="board-col-item col-active" id="col-active-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
                                 ${task.status === "active" ? htmlCard : ''}
                             </div>
                         </div>
                         <div class="col-12 col-md">
-                            <div class="board-col-item col-closed" id="col-closed${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div class="board-col-item col-closed" id="col-closed-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
                                 ${task.status === "closed" ? htmlCard : ''}
                             </div>
                         </div>
@@ -57,7 +57,7 @@ function criarLinhaTask(task) {
  * @param {*} task 
  */
 function criarCardTask(task) {
-    var html = `<div class="task-card ${task.status}" id="task-card${task.number}" draggable="true" ondragstart="drag(event)">
+    var html = `<div class="task-card ${task.status}" id="task-card-${task.number}" draggable="true" ondragstart="drag(event)">
         <div class="task-card-inner">
             <p><b class="pr-2">${task.number}</b>${task.title}</p>
             <p class="text-muted"><i class="fas fa-user-circle"></i> ${task.author}</p>
