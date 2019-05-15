@@ -20,6 +20,44 @@ input[type="text"] {
     font-size: 14px;
 }
 
+.form-control {
+    border-radius: 0;
+    font-size: 14px;
+}
+
+.form-control.no-border {
+    border: 0;
+    padding: 5px;
+    transition: none;
+}
+
+.form-control:focus,
+.form-control:active {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+
+.form-control.no-border:focus {
+    border: 1px solid #e5e5e5;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+button {
+    border-radius: 0!important;
+}
+
+.link-action {
+    min-width: 30px;
+    max-height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 14px;
+}
+
 /* header */
 header > .navbar {
     height: 48px;
@@ -253,10 +291,32 @@ a [aria-expanded="true"] {
     border-left: 5px solid #0078d4; 
     border-bottom: 1px solid #ccc;
     border-radius: 0;
+    padding: 7px;
+}
+
+.modal-task p.small-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #AAA;
+}
+
+.modal-task .form-inline {
+    width: 100%;
+}
+
+.modal-task .modal-header label {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.modal-task .form-inline .new-task-input:focus {
+    border: 1px solid #0078d4; 
 }
 
 .new-task-actions {
     display: inline-flex;
+    min-height: 32px;
+    line-height: 32px;
 }
 
 .new-task-actions .float-right {
@@ -264,7 +324,22 @@ a [aria-expanded="true"] {
     position: absolute;
 }
 
+button#save-task {
+    height: 30px;
+    margin-top: -2px;
+}
 
+.modal-task .task-form label {
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 5px;
+}
+
+.modal-task p {
+    margin-bottom: 0;
+}
 
 
 
