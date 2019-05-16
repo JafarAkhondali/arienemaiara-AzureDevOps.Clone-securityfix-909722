@@ -1,0 +1,18 @@
+CACHE MANIFEST
+index.html
+assets/css/bootstrap.min.css
+assets/css/style.css
+assets/fontawesome/css/all.min.css
+assets/img/menu/boards.png
+assets/img/menu/repos.png
+assets/img/menu/pipelines.png
+assets/img/menu/test_plans.png
+assets/img/menu/artifacts.png
+assets/fontawesome/webfonts/fa-solid-900.woff2
+assets/fontawesome/webfonts/fa-solid-900.woff
+assets/fontawesome/webfonts/fa-regular-400.woff2
+assets/fontawesome/webfonts/fa-regular-400.woff
+src/js/jquery-3.4.1.min.js
+src/js/bootstrap.min.js
+src/taskList.js
+src/tasks.js

@@ -9,7 +9,7 @@ function criarLinhaTask(task) {
     var htmlCard = criarCardTask(task)
 
     var linhaTask = `<div class="row board-cols">
-                        <div class="col-12 col-md-3 px-3 py-2" id="default-col-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="col-12 col-md-3 px-3 py-2" id="default-new-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
                             ${task.status === "new" ? htmlCard : ''}
                         </div>
                         <div class="col-12 col-md">
