@@ -1,27 +1,9 @@
-var taskList = []
-
 $(document).ready(function(){
-    loadTasks(function(response) {
-        taskList = JSON.parse(response);
-        taskList.forEach(task => {
-            criarLinhaTask(task)
-        });
+	
+	taskList.forEach(task => {
+        criarLinhaTask(task)
     });
 })
-
-function loadTasks(callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-
-    xobj.open("GET", "../src/tasks.json", true);
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null); 
-}
-
 
 function criarLinhaTask(task) {
     var htmlCard = criarCardTask(task)

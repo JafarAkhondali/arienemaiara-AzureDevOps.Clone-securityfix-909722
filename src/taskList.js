@@ -1,5 +1,4 @@
-[
-{
+var taskList = [{
     "number": "1001",
     "title": "[Cadastro] Criar tela de cadastro",
     "author": "Ariene Maiara Ribeiro",
