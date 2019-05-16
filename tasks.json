@@ -1,0 +1,47 @@
+[
+{
+    "number": "1001",
+    "title": "[Cadastro] Criar tela de cadastro",
+    "author": "Ariene Maiara Ribeiro",
+    "status": "new",
+    "description": "Criar front-end da tela de cadastro",
+    "area": "SIDEC",
+    "iteration": "SIDEC\\Sprint 1"
+},
+{
+    "number": "1002",
+    "title": "[Configuração] Criar base de dados",
+    "author": "João da Silva",
+    "status": "new",
+    "description": "Criar base de dados do projeto",
+    "area": "SIDEC",
+    "iteration": "SIDEC\\Sprint 1"
+},
+{
+    "number": "1003",
+    "title": "[Design] Fazer mockup das telas",
+    "author": "Ana Catarina",
+    "status": "new",
+    "description": "Fazer mockup das telas de inclusão",
+    "area": "SIDEC",
+    "iteration": "SIDEC\\Sprint 1"
+},
+{
+    "number": "1004",
+    "title": "[Design] Photoshop",
+    "author": "Ana Catarina",
+    "status": "active",
+    "description": "Fazer mockup das telas de inclusão",
+    "area": "SIDEC",
+    "iteration": "SIDEC\\Sprint 1"
+},
+{
+    "number": "1005",
+    "title": "[Desenvolvimento] Criar campos tela",
+    "author": "Ariene Maiara Ribeiro",
+    "status": "closed",
+    "description": "Criar campos tela",
+    "area": "SIDEC",
+    "iteration": "SIDEC\\Sprint 1"
+}
+]
