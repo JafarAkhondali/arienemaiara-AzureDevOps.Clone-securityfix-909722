@@ -193,7 +193,7 @@
 									<div class="form-group">
 										<label id="label-task-number" name="number">0000</label>
 										<input type="hidden" name="number" id="input-number" value="">
-										<input type="text" class="new-task-input form-control px-2 col-11" name="title" id="input-title" required>
+										<input type="text" class="new-task-input form-control px-2 col-11" name="title" id="input-title" required placeholder="Task Title">
 									</div>
 								</div>
 							</div>
@@ -300,9 +300,14 @@
 			//Drag and drop apenas para a mesma linha
             var idOrigem = data.split("-")[2]
             var idDestino = ev.target.id
+            var novoStatus = idDestino.split("-")[1]
             idDestino = idDestino.split("-")[2]
-            if (idOrigem == idDestino)
+            
+            if (idOrigem == idDestino) {
+                alterarStatusTask(data, novoStatus)
                 ev.target.appendChild(document.getElementById(data));
+            }
+                
         }
     </script>
 </body>

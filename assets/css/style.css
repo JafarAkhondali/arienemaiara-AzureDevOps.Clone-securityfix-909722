@@ -151,16 +151,6 @@ a [aria-expanded="true"] {
     font-size: 15px;
 }
 
-/* @media(maz-width: 768px){
-	#sidebar{margin-left: -250px;}
-	#sidebar.active{
-		margin-left: 0px;
-	}
-	#sidebarCollapse span{
-		display: none;
-	}
-} */
-
 /* main */
 [role="main"] {
     padding-top: 48px;
@@ -243,7 +233,6 @@ a [aria-expanded="true"] {
     background-color: #fff;
     border-left: 4px solid #ccc;
     border: 1px solid #ccc;
-    /* margin: 0 15px 5px; */
     min-height: 80px!important;
     max-width: 230px;
 }
@@ -252,10 +241,6 @@ a [aria-expanded="true"] {
     padding: 10px;
     border-left: 3px solid #0078d4;;
 }
-
-/* .task-card.new .task-card-inner {
-    border-left-color: #0078d4;
-} */
 
 .task-card-inner p {
     margin-bottom: 8px;
@@ -277,13 +262,21 @@ a [aria-expanded="true"] {
     margin-right: 5px;
 }
 
+.col-active .task-status::before {
+    background-color: #0078d4;
+}
+
+.col-closed .task-status::before {
+    background-color: #28a745;
+}
+
 .board-col-item .task-card .task-card-inner {
     border-left-color: #ffc600;
 }
 
 /* new task */
 .modal-lg {
-    max-width: 900px;
+    max-width: 1100px;
 }
 
 .modal-content {
@@ -316,6 +309,10 @@ a [aria-expanded="true"] {
 
 .modal-task .form-inline .new-task-input:focus {
     border: 1px solid #0078d4; 
+}
+
+.modal-task .form-control:not(:focus) {
+    font-style: italic;
 }
 
 .new-task-actions {

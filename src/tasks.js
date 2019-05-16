@@ -62,7 +62,7 @@ function buscarProximoNumeroTask() {
 function onOpenModal() {
 	
 	var proxNumero = buscarProximoNumeroTask()
-	console.log(proxNumero)
+	
 	$("p.small-title").text(`User story ${proxNumero}`)
 	$("#label-task-number").text(proxNumero)
 	$("#input-number").val(proxNumero)
@@ -89,3 +89,6 @@ $("form#form-new-task").submit(function(event) {
 	$("#new-task-modal").modal('hide')
 });
 
+function alterarStatusTask(idCard, novoStatus) {
+    $(`#${idCard}`).find(".task-status").text(novoStatus)
+}
