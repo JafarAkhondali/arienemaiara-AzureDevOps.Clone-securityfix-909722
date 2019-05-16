@@ -9,7 +9,7 @@ function criarLinhaTask(task) {
     var htmlCard = criarCardTask(task)
 
     var linhaTask = `<div class="row board-cols">
-                        <div class="col-12 col-md-2 px-3 py-2" id="default-col-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="col-12 col-md-3 px-3 py-2" id="default-col-${task.number}" ondrop="drop(event)" ondragover="allowDrop(event)">
                             ${task.status === "new" ? htmlCard : ''}
                         </div>
                         <div class="col-12 col-md">
@@ -55,7 +55,7 @@ function buscarProximoNumeroTask() {
 		return item.number
 	})
 
-	var proxNumero = Math.max(...numbers) + 1
+	var proxNumero = numbers.length > 0 ? Math.max(...numbers) + 1 : 1
 	return proxNumero
 }
 
@@ -72,9 +72,19 @@ function onOpenModal() {
 
 
 $("form#form-new-task").submit(function(event) {
-	event.preventDefault()
+    event.preventDefault()
 	
-	var formData = $(this).serializeArray()
+    var formData = $(this).serializeArray()
+    
+    var newTaskItem = {}
+    formData.map(item => {
+        newTaskItem[item.name] = item.value
+    })
+
+    if (newTaskItem) {
+        taskList.push(newTaskItem)
+        criarLinhaTask(newTaskItem)
+    }
 	
 	$("#new-task-modal").modal('hide')
 });

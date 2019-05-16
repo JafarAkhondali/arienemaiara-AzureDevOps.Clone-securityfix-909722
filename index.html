@@ -152,7 +152,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="taskboard" role="tabpanel" aria-labelledby="taskboard-tab">
                                 <div class="row board-titles">
-                                    <div class="col-12 col-md-2">
+                                    <div class="col-12 col-md-3">
                                         <p>Collapse All</p>
                                     </div>
                                     <div class="col-12 col-md">
@@ -193,7 +193,7 @@
 									<div class="form-group">
 										<label id="label-task-number" name="number">0000</label>
 										<input type="hidden" name="number" id="input-number" value="">
-										<input type="text" class="new-task-input form-control px-2 col-11" name="title" id="input-title">
+										<input type="text" class="new-task-input form-control px-2 col-11" name="title" id="input-title" required>
 									</div>
 								</div>
 							</div>
@@ -216,7 +216,8 @@
 						<div class="col-12">
 							<div class="row task-info bg-light pt-2">
 								<div class="col-12 col-md-3">
-									<p><label class="text-muted">Stage</label> <span class="task-status">new</span></p>
+                                    <p><label class="text-muted">Stage</label> <span class="task-status">new</span></p>
+                                    <input type="hidden" name="status" id="input-status" value="new">
 									<p><label class="text-muted">Reason</label> <span>new</span></p>
 								</div>
 								<div class="col-12 col-md-5">
