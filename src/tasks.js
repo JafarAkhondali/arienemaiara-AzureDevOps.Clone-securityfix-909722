@@ -65,11 +65,23 @@ function onOpenModal() {
 	
 	$("p.small-title").text(`User story ${proxNumero}`)
 	$("#label-task-number").text(proxNumero)
-	$("#input-number").val(proxNumero)
+    $("#input-number").val(proxNumero)
+    
+    limparCamposForm()
 	
 	$("#new-task-modal").modal('show')
 }
 
+function limparCamposForm() {
+    
+    $("form#form-new-task input[type=text]").each(function(index) {
+        $(this).val("")
+    })
+
+    $("form#form-new-task textarea").each(function(index) {
+        $(this).val("")
+    })
+}
 
 $("form#form-new-task").submit(function(event) {
     event.preventDefault()
