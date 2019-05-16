@@ -131,7 +131,7 @@
                                 <a class="nav-link" href="#">Capacity</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link new-item border-left gray-hover px-2 ml-2" href="#" data-toggle="modal" data-target="#new-task-modal">
+                                <a class="nav-link new-item border-left gray-hover px-2 ml-2" href="#" onclick="onOpenModal()"> <!-- data-toggle="modal" data-target="#new-task-modal" -->
                                     <i class="fas fa-plus text-primary pr-2"></i>New Work Item<i class="fas fa-chevron-down text-muted pl-2"></i>
                                 </a>
                             </li>
@@ -165,31 +165,6 @@
                                         <p>Closed</p>
                                     </div>
                                 </div>
-                                <!-- <div class="row board-cols">
-                                    <div class="col-12 col-md-2 px-3 py-2" id="default-col" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <div class="task-card new" id="task-card" draggable="true" ondragstart="drag(event)">
-                                            <div class="task-card-inner">
-                                                <p><b class="pr-2">1001</b>Nova Atividade</p>
-                                                <p class="text-muted"><i class="fas fa-user-circle"></i> Unassigned</p>
-                                                <p>State <span class="task-status">new</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md">
-                                        <div class="board-col-item col-new" id="col-new" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md">
-                                        <div class="board-col-item col-active" id="col-active" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md">
-                                        <div class="board-col-item col-closed" id="col-closed" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div><!-- /tab-content -->  
                     </div><!-- /sprint-tabs -->  
@@ -204,104 +179,102 @@
     <div class="modal fade" id="new-task-modal" tabindex="-1" role="dialog" aria-labelledby="new-task-modal" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-task" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <div class="col-12">
-                        <div class="row">
-                            <p class="small-title">User story 1136*</p>
-                        </div>
-                        <div class="row">
-                            <div class="form-inline py-2">
-                                <div class="form-group">
-                                    <label id="label-task-number col-1">1136</label>
-                                    <input type="text" class="new-task-input form-control px-2 col-11" id="input-title">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="new-task-actions">
-                                <p class="header-option text-muted"><i class="fas fa-user-circle pr-2"></i>Ariene Maiara Ribeiro</p>
-                                <div class="float-right">
-                                    <button id="save-task" class="btn btn-primary btn-sm"><i class="fas fa-save pr-2"></i>Save & Close</button>
-                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="far fa-eye pr-2"></i>Follow</a>
-                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-redo"></i></a>
-                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-undo"></i></a>
-                                    <a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-ellipsis-h"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-                <div class="modal-body p-0">
-                    <div class="col-12">
-                        <div class="row task-info bg-light pt-2">
-                            <div class="col-12 col-md-3">
-                                <p><label class="text-muted">Stage</label> <span class="task-status">new</span></p>
-                                <p><label class="text-muted">Reason</label> <span>new</span></p>
-                            </div>
-                            <div class="col-12 col-md-5">
-                                <p><label class="text-muted">Area</label> <span>SIDEC</span></p>
-                                <p><label class="text-muted">Iteration</label> <span>SIDEC\Sprint 1</span></p>
-                            </div>
-                            <div class="col">
-                                <p class="text-muted">Updated by Ariene Maiara 4 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="row task-form bg-white pt-2">
-                            <div class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control no-border" placeholder="Click to add Description"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Acceptance Criteria</label>
-                                    <textarea class="form-control no-border"  placeholder="Click to add Acceptence Criteria"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Discussion</label>
-                                    <textarea class="form-control"  placeholder="Add a Comment"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <div class="form-group">
-                                    <label>Planning</label>
-                                    <input type="text" class="form-control no-border" id="effort" placeholder="Effort">
-                                    <input type="text" class="form-control no-border" id="remaining-work" placeholder="Remaining Work">
-                                    <input type="text" class="form-control no-border" id="done-hour" placeholder="Done Hour">
-                                    <input type="text" class="form-control no-border" id="priority" placeholder="Priority">
-                                    <input type="text" class="form-control no-border" id="risk" placeholder="Risk">
-                                </div>
-                                <div class="form-group">
-                                    <label>Classification</label>
-                                    <input type="text" class="form-control no-border" id="value-area" placeholder="Value Area">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <div class="form-group">
-                                    <label>Development</label>
-                                    <a href="#"><i class="fas fa-plus text-success pr-2"></i>Add a link</a>
-                                    <p>Development hasn't started on this item</p>
-                                    <a href="#" class="text-primary">Create new branch</a>
-                                </div>
-                                <div class="form-group">
-                                    <label>Related Work</label>
-                                    <a href="#"><i class="fas fa-plus text-success pr-2"></i>Add a link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                        </div>
-                    </form> -->
-                </div>
-            </div>
+				<form id="form-new-task">
+					<div class="modal-header">
+						<div class="col-12">
+							<div class="row">
+								<p class="small-title">User story 0000*</p>
+								<button type="button" class="close pt-1" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="row">
+								<div class="form-inline py-2">
+									<div class="form-group">
+										<label id="label-task-number" name="number">0000</label>
+										<input type="hidden" name="number" id="input-number" value="">
+										<input type="text" class="new-task-input form-control px-2 col-11" name="title" id="input-title">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="new-task-actions">
+									<input type="hidden" name="author" id="input-author" value="Ariene Maiara Ribeiro">
+									<p class="header-option text-muted"><i class="fas fa-user-circle pr-2"></i>Ariene Maiara Ribeiro</p>
+									<div class="float-right">
+										<button id="save-task" class="btn btn-primary btn-sm"><i class="fas fa-save pr-2"></i>Save & Close</button>
+										<a class="gray-hover px-2 text-muted link-action" href="#"><i class="far fa-eye pr-2"></i>Follow</a>
+										<a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-redo"></i></a>
+										<a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-undo"></i></a>
+										<a class="gray-hover px-2 text-muted link-action" href="#"><i class="fas fa-ellipsis-h"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>                    
+					</div>
+					<div class="modal-body p-0">
+						<div class="col-12">
+							<div class="row task-info bg-light pt-2">
+								<div class="col-12 col-md-3">
+									<p><label class="text-muted">Stage</label> <span class="task-status">new</span></p>
+									<p><label class="text-muted">Reason</label> <span>new</span></p>
+								</div>
+								<div class="col-12 col-md-5">
+									<p><label class="text-muted">Area</label> <span>SIDEC</span></p>
+									<p><label class="text-muted">Iteration</label> <span>SIDEC\Sprint 1</span></p>
+									<input type="hidden" name="area" id="input-area" value="SIDEC">
+									<input type="hidden" name="iteration" id="input-iteration" value="SIDEC\Sprint 1">
+								</div>
+								<div class="col">
+									<p class="text-muted">Updated by Ariene Maiara 4 hours ago</p>
+								</div>
+							</div>
+							<div class="row task-form bg-white pt-2">
+								<div class="col-12 col-md-6">
+									<div class="form-group">
+										<label>Description</label>
+										<textarea class="form-control no-border" name="description" placeholder="Click to add Description"></textarea>
+									</div>
+									<div class="form-group">
+										<label>Acceptance Criteria</label>
+										<textarea class="form-control no-border" placeholder="Click to add Acceptence Criteria"></textarea>
+									</div>
+									<div class="form-group">
+										<label>Discussion</label>
+										<textarea class="form-control"  placeholder="Add a Comment"></textarea>
+									</div>
+								</div>
+								<div class="col-12 col-md-3">
+									<div class="form-group">
+										<label>Planning</label>
+										<input type="text" class="form-control no-border" id="effort" placeholder="Effort">
+										<input type="text" class="form-control no-border" id="remaining-work" placeholder="Remaining Work">
+										<input type="text" class="form-control no-border" id="done-hour" placeholder="Done Hour">
+										<input type="text" class="form-control no-border" id="priority" placeholder="Priority">
+										<input type="text" class="form-control no-border" id="risk" placeholder="Risk">
+									</div>
+									<div class="form-group">
+										<label>Classification</label>
+										<input type="text" class="form-control no-border" id="value-area" placeholder="Value Area">
+									</div>
+								</div>
+								<div class="col-12 col-md-3">
+									<div class="form-group">
+										<label>Development</label>
+										<a href="#"><i class="fas fa-plus text-success pr-2"></i>Add a link</a>
+										<p>Development hasn't started on this item</p>
+										<a href="#" class="text-primary">Create new branch</a>
+									</div>
+									<div class="form-group">
+										<label>Related Work</label>
+										<a href="#"><i class="fas fa-plus text-success pr-2"></i>Add a link</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
         </div>
     </div>
    
@@ -321,6 +294,8 @@
         function drop(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
+			
+			//Drag and drop apenas para a mesma linha
             var idOrigem = data.split("-")[2]
             var idDestino = ev.target.id
             idDestino = idDestino.split("-")[2]

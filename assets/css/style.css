@@ -16,6 +16,10 @@ p {
     font-size: 14px;
 }
 
+button: {
+	outline: none;
+}
+
 input[type="text"] {
     font-size: 14px;
 }

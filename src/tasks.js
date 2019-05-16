@@ -1,6 +1,8 @@
+var taskList = []
+
 $(document).ready(function(){
     loadTasks(function(response) {
-        var taskList = JSON.parse(response);
+        taskList = JSON.parse(response);
         taskList.forEach(task => {
             criarLinhaTask(task)
         });
@@ -19,6 +21,7 @@ function loadTasks(callback) {
     };
     xobj.send(null); 
 }
+
 
 function criarLinhaTask(task) {
     var htmlCard = criarCardTask(task)
@@ -44,16 +47,13 @@ function criarLinhaTask(task) {
                         </div>
                     </div>`
 
-    // console.log(document.getElementsByClassName("board-cols"))
-
     var divTaskboard = document.getElementById("taskboard");
     divTaskboard.insertAdjacentHTML("beforeend", linhaTask);
 
-    // document.getElementById("taskboard").appendChild(htmlCard);  
 }
 
 /**
- * Cria html da tasks para incluir no board
+ * Cria html da task para incluir no board
  * @param {*} task 
  */
 function criarCardTask(task) {
@@ -67,3 +67,33 @@ function criarCardTask(task) {
 
     return html
 }
+
+function buscarProximoNumeroTask() {
+	var numbers = taskList.map(item => {
+		return item.number
+	})
+
+	var proxNumero = Math.max(...numbers) + 1
+	return proxNumero
+}
+
+function onOpenModal() {
+	
+	var proxNumero = buscarProximoNumeroTask()
+	console.log(proxNumero)
+	$("p.small-title").text(`User story ${proxNumero}`)
+	$("#label-task-number").text(proxNumero)
+	$("#input-number").val(proxNumero)
+	
+	$("#new-task-modal").modal('show')
+}
+
+
+$("form#form-new-task").submit(function(event) {
+	event.preventDefault()
+	
+	var formData = $(this).serializeArray()
+	
+	$("#new-task-modal").modal('hide')
+});
+
